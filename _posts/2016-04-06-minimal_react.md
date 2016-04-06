@@ -14,7 +14,7 @@ I'm not oppose to build systems. The frontend community is reinventing (or re-di
 Now I'm going to show you how to bulid a minimal React project without Node, npm, browserify, webpack and babel.
 
 
-###1. Load React.js from CDN instead of `npm`
+### 1. Load React.js from CDN instead of `npm`
 
 Insteal of running 
 
@@ -35,7 +35,7 @@ write these lines to your main html file
 </pre>
 
 
-###2. Get rid of JSX
+### 2. Get rid of JSX
 
 Did you notice that we didn't include the babel in-browser transpiler (Previously `JSXTrasnformer.js`)? [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) is one of the key reason React apps needs a build step. The build/transformation step also makes the code hard to debug. In fact creating the DOM using React's JS API `React.createElement()` is not as hard as you might think. Here are some example:
 
@@ -98,17 +98,17 @@ React.createElement('div, null,
 </code>
 </pre>
 
-###3. Importing modules
+### 3. Importing modules
     
   This is probably the most tricky part.  Most of the React.js modules out there follows [CommonJS](https://webpack.github.io/docs/commonjs.html) syntax. To be honest, I don't have a good solution for this.  For very simple prototypes, I just expose everything in the global scope. I still split the JavaScript into multiple files so I can refactor them into ES6 modules when it's ready.
 
-###4. CSS Styles
+### 4. CSS Styles
 
 As far as I know, the React community promotes the use of [inline style](https://facebook.github.io/react/tips/inline-styles.html),  but I still prefer separate stylesheets.
 
 
 
-##The Benefits
+## The Benefits
 
 First, we reduce the number of dependencies;  Not just the number of npm packages, but we are also less prone to Node and NPM version incompatibilities. Given the recent [left-pad](http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/) incident and my previous experience with Node.js Gaia Integration Tests for B2G, I believe this will save you from a lot of trouble.
 
