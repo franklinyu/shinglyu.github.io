@@ -4,4 +4,5 @@ highlighter: null
 markdown: kramdown
 exclude_pages: ["Hi! I'm Shing Lyu", "JCMG Corpus", "RSS"]
 description: Shing Lyu's Portfolio and Blog
+url: https://shinglyu.github.io
 
