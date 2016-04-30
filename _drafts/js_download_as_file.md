@@ -3,6 +3,8 @@ layout: post
 title:  "Download JavaScript Data as Files on the Client Side"
 categories: Web
 date:   2016-04-06 21:55:00 +08:00
+tag: 
+  - mozilla
 excerpt_separator: <!--more-->
 ---
 
