@@ -2,7 +2,7 @@
 layout: post
 title:  "Visualizing Performance Data on Perfherder"
 categories: Web
-date:   2015-04-06 21:55:00 +08:00
+date:   2016-05-07 21:20:00 +08:00
 tags: mozilla
 excerpt_separator: <!--more-->
 ---
