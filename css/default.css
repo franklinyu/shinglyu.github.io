@@ -32,3 +32,6 @@ code {
   font-weight: normal;
 }
 
+.post img {
+  box-shadow: 3px 3px 5px black;
+}
