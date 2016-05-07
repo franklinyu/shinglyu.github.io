@@ -33,6 +33,7 @@
       </ul>
       <section class="top-bar-section">
       <ul class="right">
+         <li {% if node.url == page.url%} class="active" {% endif %}><a href="/blog/">Blog</a></li>
         {% assign sorted_pages = site.pages | sort:"name" %}
         {% for node in sorted_pages %}
           {% if site.exclude_pages contains node.title %}
