@@ -12,7 +12,8 @@ At Mozilla, we use [Perfherder](https://treeherder.mozilla.org/perf.html#/graphs
 <!--more-->
 Recently I was doing [page load performance testing](https://github.com/servo/servo/issues/10452) for [Servo](https://servo.org/), our goal is to test how fast Servo can load real web pages, comparing to other browser engines. I build a test runner in Python from scratch. But for the data visualization and analysis, I want to levarage existing solutions. I tried [Raptor](https://developer.mozilla.org/en-US/docs/Archive/Firefox_OS/Automated_testing/Raptor), which is a dashboard we used for the B2G OS project. It was quite neat, using a [influxDB](https://influxdata.com/) backend and [Grafana](http://grafana.org/) frontend. But since the B2G OS project is sunsetting, the Raptor tool is no longer under active development. So I decided to use Perfherder, which is used heavily by the Platform (Gecko) team.
 
-##Basic Concepts
+## Basic Concepts
+
 Before we dive into the code, we should understand some basic concepts about Perfherder in general. Perfherder is part of the Treeherder project, which is a dashboard for test results. For the Gecko project, the test results are from  build jobs and test jobs running on buildbot (deprecated) and [TaskCluster](https://docs.taskcluster.net/).
 
 You can see the architecture of Treeherder in this [diagram](https://treeherder.readthedocs.io/list_of_services.html). It's OK if you can't understand everything at one glance, we won't need to understand them all to use Perfherder. For user who wants to submit test results, there is a web API server that accepts the test result data (as JSON), and Treeherder stores it in a MySQL database. When the user opens [https://treeherder.mozilla.org](https://treeherder.mozilla.org), the web server renders the dashboard and the Perfherder graph from the data in the database.
