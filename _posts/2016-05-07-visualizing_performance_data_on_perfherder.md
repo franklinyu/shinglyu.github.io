@@ -272,8 +272,9 @@ The performance artifact `perf_data` should look like this:
 
 Here we submit the `domComplete` time for loading the pages. The `value` is a geometric mean of all the subtests' `domComplete` time. You can use other ways to summarize the results from all the subtests. Be careful not to submit data that is over 80 characters long, Threeherder has an [undocumented limit](https://bugzilla.mozilla.org/show_bug.cgi?id=1269629#c1) for that.
 
-By assigning the framework as `talos` (a performance suite used in Gecko), the Treeherder UI will generate a "Performance" tab for us, from which you can find the link to the Perfherder view.
+<strike>By assigning the framework as `talos` (a performance suite used in Gecko)</strike>, the Treeherder UI will generate a "Performance" tab for us, from which you can find the link to the Perfherder view.
 
+__Edit__: If you have a new perofrmance test framework, and want Treeherder to generate the "Performance" tab for you, you should open a bug for that. Here is an [example](https://bugzilla.mozilla.org/show_bug.cgi?id=1271472). After you add your framework to `treehderder/model/fixtures/performance_framework.json`, you can use `"framework": {"name": "your_framwork_name"}` in your performance artifact.
 ![performance_tab]({{site_url}}/blog_assets/perfherder/performance_tab.png)
 
 By clicking on the test result number 9607, you'll be directed to the graph:
