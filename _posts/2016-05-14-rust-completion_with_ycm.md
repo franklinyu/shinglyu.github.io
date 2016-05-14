@@ -2,7 +2,7 @@
 layout: post
 title:  "Rust Code Completion with YouCompleteMe"
 categories: Productivity
-date:   2016-05-14 13:10:00 +08:00
+date:   2016-05-13 9:10:00 +08:00
 excerpt_separator: <!--more-->
 ---
 
