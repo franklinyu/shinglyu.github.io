@@ -3,6 +3,7 @@ layout: post
 title:  "Rust Code Completion with YouCompleteMe"
 categories: Productivity
 date:   2016-05-13 23:00:00 +08:00
+tags: mozilla
 excerpt_separator: <!--more-->
 ---
 
