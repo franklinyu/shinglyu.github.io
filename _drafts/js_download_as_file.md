@@ -10,6 +10,7 @@ excerpt_separator: <!--more-->
 
 When building websites or web apps, creating a “Download as file” link is quite useful. For example if you want to allow user to export some data as JSON, CSV or plain text files so they can open them in external programs or load them back later. Usually this requires a web server to format the file and serve it. But actually you can export arbitrary JavaScript variable to file entirely on the client side. I have implemented that function in one of my project, MozApoy, and here I’ll explain how I did that.
 
+<!--more-->
 
 First, we create a link in HTML
 
