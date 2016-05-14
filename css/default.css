@@ -40,3 +40,12 @@ code {
   text-align:center;
   height:auto;
 }
+
+a > code {
+  text-decoration: underline;
+}
+
+.post_time {
+  text-align: right;
+  color: grey;
+}
