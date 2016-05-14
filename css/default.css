@@ -49,3 +49,8 @@ a > code {
   text-align: right;
   color: grey;
 }
+
+figure.highlight {
+  /* Make highlighted code block look the same as normal code block */
+  margin: 0px;
+}
