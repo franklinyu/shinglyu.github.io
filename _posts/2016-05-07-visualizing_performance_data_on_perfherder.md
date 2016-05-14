@@ -43,11 +43,11 @@ If you want to create a new repository on Treeherder, just like we do for Servo,
 
 ## Installing the Treeherder Client
 Installing the Python client is easy. If you use virtualenv, you can simply run: 
-
-<pre><code>virtualenv venv
+{% highlight bash %}
+virtualenv venv
 source venv/bin/activate
 pip install treeherder-client
-</code></pre>
+{% endhighlight %}
 
 Then, you can `import thclient` in your python script to use it. It provides endpoints for Resultset and Job collections. You can read more in the [official documentation](https://treeherder.readthedocs.io/submitting_data.html), but be warned, the example code has errors. We'll show you a modified example instead.
 
@@ -56,7 +56,7 @@ First, we need to submit our build metadata as a Resultset. The code we use for 
 
 The data should look like this:
 
-~~~
+{% highlight python %}
 dataset = [
             {
                 # The top-most revision in the list of commits for a push.
@@ -80,11 +80,12 @@ dataset = [
                 ]
             }
         ]
-~~~
+{% endhighlight %}
 
 Then, we fill in the data into a Resultset object for submission:
 
-~~~
+{% highlight python %}
+dataset = [
 from thclient import (TreeherderClient, TreeherderResultSetCollection)
 
 # Create a Resultset collection
@@ -116,12 +117,13 @@ for data in dataset:
     trs.add_revisions(revisions)
 
     trsc.add(trs)
-~~~
+{% endhighlight %}
 
 
 Finally, we create a Treeherder client and submit the data (through an HTTP(S) POST request):
 
-~~~
+{% highlight python %}
+dataset = [
 # Use the client id and secure you created before.
 client = TreeherderClient(protocol='https', # Use 'http' if running locally
                           host='local.treeherder.mozilla.org',
@@ -134,7 +136,7 @@ project_name = 'servo'
 # fails a TreeherderClientError is raised
 
 client.post_collection(project_name, trsc)
-~~~
+{% endhighlight %}
 
 This is how it looks like on Treeherder:
 
@@ -145,7 +147,7 @@ This is how it looks like on Treeherder:
 ## Submitting a Performance Artifact
 After the Resultset was created, we can submit a Job collection containing the performance artifact:
 
-~~~
+{% highlight python %}
 dataset = [
     {
         'project': 'servo',
@@ -238,7 +240,7 @@ dataset = [
         }
     }
 ]
-~~~
+{% endhighlight %}
 
 After you submit this data (see the submission code below), you'll see a test result marked as `PL` in the `SP` group:
 
@@ -252,7 +254,8 @@ In the `artifacts` section, we submitted two types of artifacts, first is the pe
 
 The performance artifact `perf_data` should look like this:
 
-~~~
+{% highlight python %}
+dataset = [
 "performance_data": {
     # You need to mark the framework as "talos" so 
     # Treeherder will generate a "Performance" tab
@@ -268,7 +271,7 @@ The performance artifact `perf_data` should look like this:
         }
     ]
 }
-~~~
+{% endhighlight %}
 
 Here we submit the `domComplete` time for loading the pages. The `value` is a geometric mean of all the subtests' `domComplete` time. You can use other ways to summarize the results from all the subtests. Be careful not to submit data that is over 80 characters long, Threeherder has an [undocumented limit](https://bugzilla.mozilla.org/show_bug.cgi?id=1269629#c1) for that.
 
@@ -289,7 +292,8 @@ If you click on the "+ Add more test data" button, you can choose to show all su
 
 And this is the code for actually submitting the data to Treeherder; we leave it to the end because it's similar to the previous one. This is of course a simplified version, to see the real code I run in production, check [here](https://github.com/shinglyu/servo-perf/blob/stage/submit_to_perfherder.py#L121..L277).
 
-~~~
+{% highlight python %}
+dataset = [
 tjc = TreeherderJobCollection()
 
 for data in dataset:
@@ -343,7 +347,7 @@ for data in dataset:
     tjc.add(tj)
 
 client.post_collection(project_name, tjc)
-~~~
+{% endhighlight %}
 
 
 ## It's Your Turn
