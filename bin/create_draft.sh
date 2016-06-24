@@ -18,3 +18,4 @@ sed -i "s/date: 2010-01-01 00:00:00 +08:00/date: $TIME/g" $OUTFILE
 # cp _drafts
 echo "File gereated: $OUTFILE"
 cat $OUTFILE
+vim $OUTFILE
