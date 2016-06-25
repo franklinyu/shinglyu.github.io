@@ -22,11 +22,11 @@ Each page is tested three times for Servo, then we take the medium of the three.
 Talos test results for Gecko have been using Treeherder and Perfherder for a while. The former is a dashboard for test results per commit; the latter is a line plot visualization for the Talos results. With the help from the Treeherder team, we were able to push Servo performance test results to the Perfherder dashboard. I had a [blog post](TBD) on how to do this.
 
 Here is how Perfherder looks like:
-![Perfherder]*(TBD)
+![Perfherder](TBD)
 
 ## Implementation
 
-We created a [python test runner](TBD) to execute the test. To minimize the effect of hardware differences, we run the Vagrant (VirtualBox backend) virtual machine used in Servo's CI infrastructure. (You can find the Vagrantfile [here](TBD)). The test is scheduled by [buildbot](TBD) and runs every midnight.
+We created a [python test runner](TBD) to execute the test. To minimize the effect of hardware differences, we run the Vagrant (VirtualBox backend) virtual machine used in Servo's CI (Continuous Integration) infrastructure. (You can find the Vagrantfile [here](TBD)). The test is scheduled by [buildbot](TBD) and runs every midnight.
 
 The test results are collected into a JSON file, then consumed by the test result [uploader script](TBD). The uploader script will format the test result, calculate the average and push the data to Treeherder/Perfherder throught the [Python client]
 
@@ -34,19 +34,40 @@ The test results are collected into a JSON file, then consumed by the test resul
 
 ## The 25% Speedup!
 
+A week before the Mozilla London Workweek, we found a big gap in the Perfherder graph. The average page load time changed from about 2000 ms to 1500 ms on June 10th. 
 
-* Background
-  * Why we need
-  * tracing bug
-  * talos and treeherder
-* Test design
-  * talos
-  * Frequency
-  * Buildbot
-* The Jun 10 improvement
-* Bisecting with Buildbot
-* Conclusion
-* Credit
-  * wlach
-  * annesh
-  * lars
+![Improvement graph](TBD)
+
+We were very excited about the significant improvement. Perfherder conveniently links to the commits in that build, but there are 26 commits in between. 
+
+![Link to commits](TBD)
+![GitHub commits](TBD)
+
+You should notice that there are many commits by the "bors-servo" bot, who is out automatic CI bot that does the pre-commit testing and auto-merging. Those commits are the merge commits generated when the pull request is merged. Other commits are commits from the contributors branch, so they may appear earlier then the corresponding merge commit. Since we only care when the commit gets merged to the master branch, not when the contributor commits to their own branch, we'll only bisect the merge commits by bors-servo.
+
+Buildbot provides a convenient web interface for forcing a build on certain commits. 
+
+![Buildbot force build](TBD)
+
+You can simply type the commit has in the "Revision" field and buildbot will checkout that commit, build it and run all the tests.
+
+![Buildbot force build zoom in](TBD)
+
+You can track the progress on the Buildbot waterfall dashboard.
+
+![Buildbot waterfall](TBD)
+
+Finally, you'll be able to see the test result on Treeherder and Perfherder.
+
+![Treeherder](TBD)
+![Perfherder with bisects](TBD)
+
+The performance improvement turns out to be the result of this [patch](https://github.com/servo/servo/pull/11513), it use a hashmap to replace a slow list search. 
+
+## Looking Forward
+
+In the near future, we'll focus on improving the framework's stability to support Servo's performance optimization endeavor. We'll also work closely with the Treeherder team to expand the flexibility of Treeherder and Perfherder to support more performance frameworks. 
+
+If you are interested in the framework, you can find open bugs [here](TBD), or join the discussion in the [tracking bug](TBD).
+
+Thanks [William Lachance](TBD) for his help on the Treeherder and Perfherder stuff, and helped me a lot in setting it up on Treeherder staging server. And thanks [Lars Bergstrom](TBD) and [Jack Moffit](TBD) for their advice throughout the planning process. And thanks [Adrian Utrilla](TBD) for contributing many good features to this project.
