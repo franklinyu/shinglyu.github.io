@@ -13,24 +13,22 @@ Back in April, I opened this bug [#10452](https://github.com/servo/servo/issues/
 <!--more-->
 
 ## Test Design
-[Talos](TBD) is a performance test suite designed for Gecko, the browser engine for Firefox. It has many different kinds of tests, covering user-level UI testing and benchmarking. But what we really care about is the [TP5](TBD) page load test suite. As the [wiki](TBD) says, TP5 use Firefox to load 51 scrapped websites selected from the [Alexa Top 500](TBD) sites of its time. Those sites are hand-picked, then downloaded and cleaned to remove all external web resources. Then these web pages are hosted on a local server to reduce network latency impact.
+[Talos](https://wiki.mozilla.org/Buildbot/Talos) is a performance test suite designed for Gecko, the browser engine for Firefox. It has many different kinds of tests, covering user-level UI testing and benchmarking. But what we really care about is the [TP5](https://wiki.mozilla.org/Buildbot/Talos/Tests#tp5) page load test suite. As the [wiki](https://wiki.mozilla.org/Buildbot/Talos/Tests#tp5) says, TP5 use Firefox to load 51 scrapped websites selected from the [Alexa Top 500](http://www.alexa.com/topsites) sites of its time. Those sites are hand-picked, then downloaded and cleaned to remove all external web resources. Then these web pages are hosted on a local server to reduce network latency impact.
 
-Each page is tested three times for Servo, then we take the medium of the three. (We should test more times, but it will take too long.) Then all the mediums are averaged using [geometric mean](TBD). Geometric mean has a great property that even if two test results are of different scale (e.g. 500 ms v.s. 10000 ms), if any one of them changed by 10%, they will have equal impact on the average.
+Each page is tested three times for Servo, then we take the medium of the three. (We should test more times, but it will take too long.) Then all the mediums are averaged using [geometric mean](https://en.wikipedia.org/wiki/Geometric_mean). Geometric mean has a great property that even if two test results are of different scale (e.g. 500 ms v.s. 10000 ms), if any one of them changed by 10%, they will have equal impact on the average.
 
 ## Visualization
 
-Talos test results for Gecko have been using Treeherder and Perfherder for a while. The former is a dashboard for test results per commit; the latter is a line plot visualization for the Talos results. With the help from the Treeherder team, we were able to push Servo performance test results to the Perfherder dashboard. I had a [blog post](TBD) on how to do this.
+Talos test results for Gecko have been using Treeherder and Perfherder for a while. The former is a dashboard for test results per commit; the latter is a line plot visualization for the Talos results. With the help from the Treeherder team, we were able to push Servo performance test results to the Perfherder dashboard. I had a [blog post](http://shinglyu.github.io/web/2016/05/07/visualizing_performance_data_on_perfherder.html) on how to do this.
 
 Here is how Perfherder looks like:
 ![Perfherder](TBD)
 
 ## Implementation
 
-We created a [python test runner](TBD) to execute the test. To minimize the effect of hardware differences, we run the Vagrant (VirtualBox backend) virtual machine used in Servo's CI (Continuous Integration) infrastructure. (You can find the Vagrantfile [here](TBD)). The test is scheduled by [buildbot](TBD) and runs every midnight.
+We created a [python test runner](https://github.com/shinglyu/servo-perf/blob/master/runner.py) to execute the test. To minimize the effect of hardware differences, we run the Vagrant (VirtualBox backend) virtual machine used in Servo's CI infrastructure. (You can find the Vagrantfile [here](https://github.com/servo/saltfs/blob/master/Vagrantfile)). The test is scheduled by [buildbot](http://buildbot.net/) and runs every midnight.
 
-The test results are collected into a JSON file, then consumed by the test result [uploader script](TBD). The uploader script will format the test result, calculate the average and push the data to Treeherder/Perfherder throught the [Python client]
-
-(version json)
+The test results are collected into a JSON file, then consumed by the test result [uploader script](https://github.com/shinglyu/servo-perf/blob/master/submit_to_perfherder.py). The uploader script will format the test result, calculate the average and push the data to Treeherder/Perfherder throught the [Python client](http://treeherder.readthedocs.io/submitting_data.html)
 
 ## The 25% Speedup!
 
