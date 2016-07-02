@@ -66,6 +66,6 @@ The performance improvement turns out to be the result of this [patch](https://g
 
 In the near future, we'll focus on improving the framework's stability to support Servo's performance optimization endeavor. We'll also work closely with the Treeherder team to expand the flexibility of Treeherder and Perfherder to support more performance frameworks. 
 
-If you are interested in the framework, you can find open bugs [here](TBD), or join the discussion in the [tracking bug](TBD).
+If you are interested in the framework, you can find open bugs [here](https://github.com/shinglyu/servo-perf/issues), or join the discussion in the [tracking bug](https://github.com/servo/servo/issues/10452).
 
-Thanks [William Lachance](TBD) for his help on the Treeherder and Perfherder stuff, and helped me a lot in setting it up on Treeherder staging server. And thanks [Lars Bergstrom](TBD) and [Jack Moffit](TBD) for their advice throughout the planning process. And thanks [Adrian Utrilla](TBD) for contributing many good features to this project.
+Thanks [William Lachance](https://github.com/wlach) for his help on the Treeherder and Perfherder stuff, and helped me a lot in setting it up on Treeherder staging server. And thanks [Lars Bergstrom](https://github.com/larsbergstrom) and [Jack Moffit](https://github.com/metajack) for their advice throughout the planning process. And thanks [Adrian Utrilla](https://github.com/autrilla) for contributing many good features to this project.
