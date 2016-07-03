@@ -19,10 +19,7 @@ Each page is tested three times for Servo, then we take the medium of the three.
 
 ## Visualization
 
-Talos test results for Gecko have been using Treeherder and Perfherder for a while. The former is a dashboard for test results per commit; the latter is a line plot visualization for the Talos results. With the help from the Treeherder team, we were able to push Servo performance test results to the Perfherder dashboard. I had a [blog post](http://shinglyu.github.io/web/2016/05/07/visualizing_performance_data_on_perfherder.html) on how to do this.
-
-Here is how Perfherder looks like:
-![Perfherder](TBD)
+Talos test results for Gecko have been using Treeherder and Perfherder for a while. The former is a dashboard for test results per commit; the latter is a line plot visualization for the Talos results. With the help from the Treeherder team, we were able to push Servo performance test results to the Perfherder dashboard. I had a [blog post](http://shinglyu.github.io/web/2016/05/07/visualizing_performance_data_on_perfherder.html) on how to do this. You'll see screenshots for Treeherder and Perfherder in the following sections.
 
 ## Implementation
 
@@ -34,33 +31,35 @@ The test results are collected into a JSON file, then consumed by the test resul
 
 A week before the Mozilla London Workweek, we found a big gap in the Perfherder graph. The average page load time changed from about 2000 ms to 1500 ms on June 10th. 
 
-![Improvement graph](TBD)
+![Improvement graph]({{site_url}}/blog_assets/servo-perf/drop_graph.png)
 
 We were very excited about the significant improvement. Perfherder conveniently links to the commits in that build, but there are 26 commits in between. 
 
-![Link to commits](TBD)
-![GitHub commits](TBD)
+![Link to commits]({{site_url}}/blog_assets/servo-perf/drop_graph_commits.png)
+
+![GitHub commits]({{site_url}}/blog_assets/servo-perf/commits_full.png)
 
 You should notice that there are many commits by the "bors-servo" bot, who is out automatic CI bot that does the pre-commit testing and auto-merging. Those commits are the merge commits generated when the pull request is merged. Other commits are commits from the contributors branch, so they may appear earlier then the corresponding merge commit. Since we only care when the commit gets merged to the master branch, not when the contributor commits to their own branch, we'll only bisect the merge commits by bors-servo.
 
 Buildbot provides a convenient web interface for forcing a build on certain commits. 
 
-![Buildbot force build](TBD)
+![Buildbot force build]({{site_url}}/blog_assets/servo-perf/buildbot_force.png)
 
 You can simply type the commit has in the "Revision" field and buildbot will checkout that commit, build it and run all the tests.
 
-![Buildbot force build zoom in](TBD)
+![Buildbot force build zoom in]({{site_url}}/blog_assets/servo-perf/force_zoom.png)
 
 You can track the progress on the Buildbot waterfall dashboard.
 
-![Buildbot waterfall](TBD)
+![Buildbot waterfall]({{site_url}}/blog_assets/servo-perf/buildbot_waterfall.png)
 
 Finally, you'll be able to see the test result on Treeherder and Perfherder.
 
-![Treeherder](TBD)
-![Perfherder with bisects](TBD)
+![Treeherder]({{site_url}}/blog_assets/servo-perf/treeherder.png)
 
-The performance improvement turns out to be the result of this [patch](https://github.com/servo/servo/pull/11513), it use a hashmap to replace a slow list search. 
+![Perfherder with bisects]({{site_url}}/blog_assets/servo-perf/bisect_data.png)
+
+The performance improvement turns out to be the result of this [patch](https://github.com/servo/servo/pull/11513) by [Florian Duraffourg](https://github.com/fduraffourg), he use a hashmap to replace a slow list search.
 
 ## Looking Forward
 
