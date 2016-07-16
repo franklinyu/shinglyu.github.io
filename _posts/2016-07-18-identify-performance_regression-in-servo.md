@@ -2,11 +2,11 @@
 layout: post
 title: Identify Performance Regression in Servo
 categories: Web
-date: 2016-06-24 14:32:19 +08:00
+date: 2016-07-18 10:00:00 +08:00
 excerpt_separator: <!--more-->
 ---
 
-Performance has always been a key focus for the Servo browser engine project. But just measure the performance through profilers and benchmarks is not enough. The first impression to a real user is the page load time. Although many internal, non-visiable optimizations are important, we still want to make sure our page load time is doing well.
+Performance has always been a key focus for the Servo browser engine project. But just measure the performance through profilers and benchmarks is not enough. The first impression to a real user is the page load time. Although many internal, non-visible optimizations are important, we still want to make sure our page load time is doing well.
 
 Back in April, I opened this bug [#10452](https://github.com/servo/servo/issues/10452) to start planning the page load test. With the kind advice from the Servo community and the Treeherder people, we finally settled for a test design similar to the Talos test suite, and decided to use Perfherder for visualization.
 
