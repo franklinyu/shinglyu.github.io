@@ -3,6 +3,7 @@ layout: post
 title: Identify Performance Regression in Servo
 categories: Web
 date: 2016-07-18 10:00:00 +08:00
+tags: mozilla
 excerpt_separator: <!--more-->
 ---
 
