@@ -1,18 +1,21 @@
-- title: Community
+- title: Talks
   publications:
-    - title: "2015 MozLando Firefox OS All-hands speaker"
+    - title: "2016 COSCUP Speaker, Taipei"
+      title_url: https://shinglyu.github.io/my_presentations/2016-coscup-servo-intro.pdf
+      description: "\"Servo, the parallel browser engine\" at Conference for Open Source Coders, Users and Promoters (click the title for slides)"
+    - title: "2015 MozLando Firefox OS All-hands speaker, Orlando"
       title_url: ""
       description: Talking about Firefox OS Add-ons
 
-    - title: "2015 NCU Academy Program Lecturer"
+    - title: "2015 NCU Academy Program Lecturer, Taoyuan"
       title_url: "https://wiki.mozilla.org/Firefox_OS/AcademyNCU2015#Mentors_.2F_Session_Owner"
       description: "Teaching undergrads about software testing and JavaScrpt unit testing at \"Implementation and SDLC of Web Apps\" class at National Central Univesity"
 
-    - title: "2015 NTU Open Source Club Workshop Speaker"
+    - title: "2015 NTU Open Source Club Workshop Speaker, Taipei"
       title_url: ""
       description: "Hosting the Firefox OS Hands-on Workshop at National Taiwan University Open Source Club"
 
-- title: Technical
+- title: Guest Posts
   publications:
     - title: "Building an iOS-style “Unread Notifications” add-on for Firefox OS"
       title_url: "https://hacks.mozilla.org/2015/11/building-an-ios-style-unread-notifications-add-on-for-firefox-os/"
