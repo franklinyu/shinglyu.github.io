@@ -1,8 +1,13 @@
 - title: Talks
   publications:
+    - title: "2016 Modern Web Conf Speaker, Taipei"
+      title_url: ""
+      description: "\"Servo, the parallel browser engine\""
+
     - title: "2016 COSCUP Speaker, Taipei"
       title_url: https://shinglyu.github.io/my_presentations/2016-coscup-servo-intro.pdf
       description: "\"Servo, the parallel browser engine\" at Conference for Open Source Coders, Users and Promoters (click the title for slides)"
+
     - title: "2015 MozLando Firefox OS All-hands speaker, Orlando"
       title_url: ""
       description: Talking about Firefox OS Add-ons
