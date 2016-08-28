@@ -1,5 +1,9 @@
 - title: Talks
   publications:
+    - title: "2016 Taiwan Code Sprint mentor, Taipei"
+      title_url: ""
+      description: "Mentoring new contributors to fix Servo bugs"
+
     - title: "2016 Modern Web Conf Speaker, Taipei"
       title_url: ""
       description: "\"Servo, the parallel browser engine\""
