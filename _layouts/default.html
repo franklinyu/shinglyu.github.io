@@ -5,11 +5,14 @@
 <head>
 	<meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} | Shing's Blog</title>
+  <link rel="alternate" type="application/rss+xml" title="Shing's Blog's RSS" href="/feed.xml" />
 
   
   <link rel="stylesheet" href="/css/foundation.css" />
   <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/foundation-icons/foundation-icons.css" />
+  <link rel="stylesheet" href="/css/github.css" />
   <link rel="stylesheet" href="/{{page.css}}" />
   
 
@@ -31,16 +34,16 @@
       </ul>
       <section class="top-bar-section">
       <ul class="right">
-         {% assign sorted_pages = site.pages | sort:"name" %}
-         {% for node in sorted_pages%}
-           {% for ignore in site.data.pagesignore%}
-            {% if node.title == ignore %}
-              {% break %}
-            {% endif %}
+         <li {% if node.url == page.url%} class="active" {% endif %}><a href="/blog/">Blog</a></li>
+        {% assign sorted_pages = site.pages | sort:"name" %}
+        {% for node in sorted_pages %}
+          {% if site.exclude_pages contains node.title %}
+            {% continue %}
+          {% else %}
            <li class="divider"></li>
            <li {% if node.url == page.url%} class="active" {% endif %}><a href="{{node.url}}">{{node.title}}</a></li>
-           {%endfor%}
-         {%endfor%}
+        {% endif %}
+        {%endfor%}
       </ul>
       </section>
       </nav>

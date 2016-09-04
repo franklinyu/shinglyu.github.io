@@ -9,3 +9,48 @@
 .th {
    width:100%;
 }
+
+ul, ol, li {
+  list-style-position:inside
+}
+
+/* for blog */
+ol li p {
+  display:inline
+}
+
+pre {
+  margin-top: 1em; 
+  margin-bottom: 1em; 
+  padding: 0.5em;
+  font-size: 14px;
+  background-color:lightgrey;
+  overflow: auto;
+}
+
+code {
+  font-weight: normal;
+}
+
+.post img {
+  box-shadow: 3px 3px 5px black;
+}
+
+.pagination {
+  text-align:center;
+  height:auto;
+}
+
+a > code {
+  text-decoration: underline;
+}
+
+.post_time {
+  text-align: right;
+  color: grey;
+}
+
+figure.highlight {
+  /* Make highlighted code block look the same as normal code block */
+  margin: 0px;
+}

@@ -1,0 +1,65 @@
+---
+title: Blog
+layout: default
+---
+
+<div class="row">
+   <div class="large-12 columns">
+
+   <h1>{{page.title}}</h1>
+    <div class="row">
+      <div class="large-8 columns post">
+        {% for post in paginator.posts %}
+          <h3><a href="{{ post.url  }}">{{ post.title  }}</a></h3>
+          <div class="post_time">{{ post.date | date: '%B %d, %Y'}}</div>
+          <p>{{ post.excerpt }} <a href="{{ post.url  }}">(more...)</a></p>
+          <hr>
+        {% endfor %}
+        <!-- Pagination links -->
+        <div class="pagination">
+          {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path  }}" class="previous button ">< Newer</a>
+          {% else %}
+          <span class="previous button  disabled">< Newer</span>
+          {% endif %}
+          <span class="page_number "> Page {{ paginator.page  }} of {{ paginator.total_pages  }}</span>
+          {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path  }}" class="next button ">Older ></a>
+          {% else %}
+          <span class="next button  disabled">Older ></span>
+          {% endif %}
+        </div>
+      </div>
+      <div class="large-4 columns">
+        <a href="/feed.xml" class="button">Subscribe via RSS <i class="fi-rss"></i></a>
+        <hr/>
+        <h3>All Posts</h3>
+        <ul>
+          {% for post in paginator.posts %}
+          <li>
+            <a href="{{ post.url  }}">{{ post.title  }}</a><br>
+            <div class="post_time">{{ post.date | date: '%B %d, %Y'}}</div>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="pagination">
+          {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path  }}" class="previous button small">< Newer</a>
+          {% else %}
+          <span class="previous button small disabled">< Newer</span>
+          {% endif %}
+          <span class="page_number ">{{ paginator.page  }}/{{ paginator.total_pages  }}</span>
+          {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path  }}" class="next button small">Older ></a>
+          {% else %}
+          <span class="next button small disabled">Older ></span>
+          {% endif %}
+        </div>
+        
+      </div>
+
+
+    </div>
+
+   </div>
+</div>

@@ -1,6 +1,11 @@
 name: Shing Lyu
 email: shing.lyu@gmail.com
-pygments: true
+highlighter: rouge 
 markdown: kramdown
-
+exclude_pages: ["Hi! I'm Shing Lyu", "JCMG Corpus", "RSS", "Blog"]
+description: Shing Lyu's Portfolio and Blog
+url: https://shinglyu.github.io
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "/blog/page:num/"
 
