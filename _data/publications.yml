@@ -37,13 +37,13 @@
       description: Published on Mozilla Tech Blog
 
     - title: 自己的瀏覽器自己改 (Part I) －利用Firefox Addon SDK開發簡單的附加元件
-      title_url: http://tech.mozilla.com.tw/posts/5832/%e8%87%aa%e5%b7%b1%e7%9a%84%e7%80%8f%e8%a6%bd%e5%99%a8%e8%87%aa%e5%b7%b1%e6%94%b9-part-i-%e5%88%a9%e7%94%a8firefox-addon-sdk%e9%96%8b%e7%99%bc%e7%b0%a1%e5%96%ae%e7%9a%84%e9%99%84%e5%8a%a0%e5%85%83
+      title_href: http://tech.mozilla.com.tw/posts/5832/%e8%87%aa%e5%b7%b1%e7%9a%84%e7%80%8f%e8%a6%bd%e5%99%a8%e8%87%aa%e5%b7%b1%e6%94%b9-part-i-%e5%88%a9%e7%94%a8firefox-addon-sdk%e9%96%8b%e7%99%bc%e7%b0%a1%e5%96%ae%e7%9a%84%e9%99%84%e5%8a%a0%e5%85%83
       description: Published on Mozilla Tech Blog
 
 - title: Notes and Slides
   publications:
     - title: Technical BKMs (Best Known Methods)
-      title_url: https://dl.dropboxusercontent.com/u/7281903/docs/bkm_tiddly.html
+      title_href: https://dl.dropboxusercontent.com/u/7281903/docs/bkm_tiddly.html
       description: Guides to install and configure software development environments
     - title: Slides
       title_url: http://shinglyu.github.io/my_presentations/
