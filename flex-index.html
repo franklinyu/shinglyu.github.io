@@ -6,29 +6,6 @@
     <title>Shing's Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <style type="text/css" media="screen">
-      hr{
-        max-width: 600px;
-        margin: 1em 0 1em 0;
-        border: none;
-        border-top: 1px solid;
-        text-align: center;
-      }
-      hr:after {
-        content: '§';
-        display: inline-block;
-        position: relative;
-        top: -10px;
-        /*background: #f0f0f0;*/
-        background: #ffffff;
-        color: #8c8b8b;
-        font-size: 18px;
-        -webkit-transform: rotate(70deg);
-        -moz-transform: rotate(70deg);
-        transform: rotate(70deg);
-      }
-      body {
-        font-family: "Josefin Sans", sans-serif;
-      }
       body {
         display: flex;
         flex-direction: column;
@@ -36,15 +13,17 @@
         margin: 0.5vh 0.5vw;
         min-height: 99vh;
         align-items: center;
-      }
-      .HolyGrail-body {
-        display: flex;
-        flex-direction: column;
+
+        font-family: "Josefin Sans", sans-serif;
       }
 
-      .HolyGrail-nav {
-        width: 100%;
+      .nav, footer {
+        min-width: 80%;
         text-align: center;
+      }
+
+      .nav > hr {
+        margin-left: 0;
       }
 
       article {
@@ -65,17 +44,12 @@
         flex: 1;
       }
 
-      /*@media (min-width: 768px) {*/
-      @media (min-width: 600px) {
-        .HolyGrail-body {
-          flex-direction: row;
-          flex: 1;
-        }
-        .HolyGrail-content {
+      @media (min-width: 768px) {
+        .content {
           flex: 2;
         }
-        .HolyGrail-nav, .HolyGrail-ads {
-          /* 12em is the width of the columns */
+        .nav, footer{
+          min-width: auto;
           width: 600px;
           flex: 1;
         }
@@ -84,11 +58,32 @@
         }
       }
 
+      hr{
+        max-width: 600px;
+        margin: 2em 0 1em 0;
+        border: none;
+        border-top: 1px solid;
+        text-align: center;
+      }
+      hr:after {
+        content: '§';
+        display: inline-block;
+        position: relative;
+        top: -10px;
+        /*background: #f0f0f0;*/
+        background: #ffffff;
+        color: #8c8b8b;
+        font-size: 18px;
+        -webkit-transform: rotate(70deg);
+        -moz-transform: rotate(70deg);
+        transform: rotate(70deg);
+      }
+
     </style>
   </head>
   <body class="HolyGrail">
       <header><h1>Shing Lyu</h1></header>
-      <nav class="HolyGrail-nav">
+      <nav class="nav">
         <ul id="nav_list">
           <li>About</li>
           <li>Blog</li>
@@ -97,7 +92,7 @@
         </ul>
         <hr>
       </nav>
-      <main class="HolyGrail-content">
+      <main class="content">
         <article>
           <h1>This is Lorem Ipsum</h1>
 
