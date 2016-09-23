@@ -1,56 +1,82 @@
-.top-bar {
-   margin-bottom:20em;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.5vh 0.5vw;
+  min-height: 99vh;
+  align-items: center;
+
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.right-align {
-   text-align:right;
+.nav, footer {
+  min-width: 80%;
+  text-align: center;
 }
 
-.th {
-   width:100%;
+.nav > hr {
+  margin-left: 0;
 }
 
-ul, ol, li {
-  list-style-position:inside
+article {
+  max-width: 600px;
+  text-align: justify;
 }
 
-/* for blog */
-ol li p {
-  display:inline
+#nav_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px;
+  width: 100%;
 }
 
-pre {
-  margin-top: 1em; 
-  margin-bottom: 1em; 
-  padding: 0.5em;
-  font-size: 14px;
-  background-color:lightgrey;
-  overflow: auto;
+#nav_list > li {
+  list-style-type: none;
+  flex: 1;
 }
 
-code {
-  font-weight: normal;
+@media (min-width: 768px) {
+  .content {
+    max-width: 600px;
+    flex:1;
+
+  }
+  .nav, footer{
+    min-width: auto;
+    width: 600px;
+    flex: 1;
+  }
+  #nav_list {
+    flex-direction: row;
+  }
 }
 
-.post img {
-  box-shadow: 3px 3px 5px black;
+hr{
+  max-width: 600px;
+  margin: 2em 0 1em 0;
+  border: none;
+  border-top: 1px solid;
+  text-align: center;
+}
+hr:after {
+  content: '§';
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  /*background: #f0f0f0;*/
+  background: #ffffff;
+  color: #8c8b8b;
+  font-size: 18px;
+  -webkit-transform: rotate(70deg);
+  -moz-transform: rotate(70deg);
+  transform: rotate(70deg);
 }
 
-.pagination {
-  text-align:center;
-  height:auto;
+dt {
+  font-weight: bold;
 }
 
-a > code {
-  text-decoration: underline;
-}
-
-.post_time {
-  text-align: right;
-  color: grey;
-}
-
-figure.highlight {
-  /* Make highlighted code block look the same as normal code block */
-  margin: 0px;
+footer > a {
+  margin: auto 1em;
 }

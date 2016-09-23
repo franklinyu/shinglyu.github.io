@@ -1,44 +1,30 @@
 ---
 layout: default 
 title: Talks & Publications
+css: /css/projects.css
 ---
 
-
-<div class="row">
-   <div class="large-12 columns">
-
-      <h1>{{ page.title }}</h1>
-
-      {% for category in site.data.publications%}
-      <div class="row">
-         <div class="large-3 columns">
-           <h4>{{category.title}}</h4>
-         </div>
-         <div class="large-9 columns">
-         {% for publication in category.publications%}
-            <div class="w" >
-               <div class="small-9 columns">
-                 <h5><a href="{{publication.title_url}}">{{publication.title}}</a></h5>
-                 <p>{{publication.description}}
-                 {% if publication.source_url%}
-                 <a href="{{publication.source_url}}">Source Code</a></p>
-                 {% endif %}
-               </div>
-               <div class="small-3 columns">
-                {% if publication.thumbnail_url%}
-                <a class="th radius" href="{{publication.thumbnail_url}}">
-                     <img src="{{publication.thumbnail_url}}">
-                </a>
-                {% endif %}
-               </div>
-            </div>
-            <br>
-         {% endfor %}
-         </div>
-      </div>
-      <hr> <!-- =============================== -->
-      {% endfor %}
-
-   </div>
+{% for category in site.data.publications%}
+<section class="publication-category">
+  <h1>{{category.title}}</h4>
+  {% for publication in category.publications%}
+  <dl>
+    <dt><a href="{{publication.title_href}}" target="_blank">{{publication.title}}</a></dt>
+    {% if publication.source_url%}
+    <dd>[<a href="{{publication.source_url}}" target="_blank">Source Code</a>]</dd>
+    {% endif %}
+    <dd>{{publication.description}}</dd>
+    {% if publication.thumbnail_url%}
+    <dd><a class="th radius" href="{{publication.thumbnail_url}}">
+        <img src="{{publication.thumbnail_url}}">
+    </a></dd>
+    {% endif %}
+  </dl>
+  <div class="small-3 columns">
+  </div>
 </div>
-
+<br>
+{% endfor %}
+<hr>
+</section>
+{% endfor %}

@@ -1,49 +1,14 @@
 ---
 layout: default 
 title: Hi! I'm Shing Lyu 
-css: css/index.css
+css: css/about.css
 ---
 
 
-<div class="row" id="short-bio">
-   <div class="large-12 columns center">
-      <img id="head" src="img/head.png" alt="photo of myself"/>
-         <h2>Hi, I'm 呂  行  (Shing Lyu)</h2>
-         <p> I am a <strong>software engineer</strong> and <a href="publications.html">open source advocate</a> based in Taipei, Taiwan. I work for Mozilla to build browsers.  I spent most of my time on software <a href="project.html">side projects</a> and listens to classical music.  I got my M.S. at National Taiwan University in Computer Science, focused on computer music; and I had a B.S. in Electrical Engineer and Financial Engineering.  If you want to know what I'm up to lately, you can check out my <a href="/blog/">blog</a>.</p>
-   </div>
-</div>
-
-
-<!--
-<div class="row" id="video">
-   <div class="large-12 columns center">
-     <iframe width="100%" height="320px" src="https://www.youtube.com/embed/5OtAjlL74Jw?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
-   </div>
-</div>
--->
-<div class="row" id="title-links">
-   <div class="large-12 columns center">
-<!--
-     |
-      {% assign sorted_pages = site.pages | sort:"name" %}
-      {% for node in sorted_pages %}
-        {% if site.exclude_pages contains node.title %}
-          {% continue %}
-        {% else %}
-          <h5 class="inline"><a href="{{node.url}}"><span style="white-space:nowrap;">{{node.title}}</span></a> | </h5>  
-        {% endif %}
-      {% endfor %}
-
-      <br/>
-      <br/>
-  -->
-
-      |
-      <h3 class="inline"><a href="mailto:shing.lyu@gmail.com"><i class="fi-mail"></i>&nbsp;Email</a></h3> | 
-      <h3 class="inline"><a href="http://tw.linkedin.com/pub/shing-lyu/50/361/599/en"><i class="fi-social-linkedin"></i>&nbsp;LinkedIn</a></h3> | 
-      <h3 class="inline"><a href="https://www.github.com/shinglyu"><i class="fi-social-github"></i>&nbsp;GitHub</a></h3> | 
-      <h3 class="inline"><a href="/feed.xml"><i class="fi-rss"></i>&nbsp;RSS</a></h3> 
-      |
-   </div>
+<div id="about-content">
+  <aside id="about-photo">
+    <img id="head" src="img/head.png" alt="photo of myself"/>
+  </aside>
+  <p id="about-intro"> I am a <strong>software engineer</strong> and <a href="publications.html">open source advocate</a> based in Taipei, Taiwan. I work for Mozilla to build browsers.  I spent most of my time on software <a href="project.html">side projects</a> and listens to classical music.  I got my M.S. at National Taiwan University in Computer Science, focused on computer music; and I had a B.S. in Electrical Engineer and Financial Engineering.  If you want to know what I'm up to lately, you can check out my <a href="/blog/">blog</a>.</p>
 </div>
 

@@ -1,0 +1,17 @@
+#about-content {
+  max-width: 768px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#about-photo {
+  flex: 1;
+  text-align: center;
+}
+
+#about-intro {
+  margin-left: 1em;
+  flex: 2;
+}

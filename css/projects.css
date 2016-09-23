@@ -1,0 +1,14 @@
+.project-category {
+  max-width: 600px;
+}
+
+main > section > hr {
+  width: 50%;
+  margin: 0 auto;
+}
+dd > a > img {
+  max-width: 80%;
+  max-height: 60vh;
+}
+
+
