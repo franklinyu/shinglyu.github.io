@@ -4,7 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Shing's Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <style type="text/css" media="screen">
+      hr{
+        max-width: 600px;
+        margin: 1em 0 1em 0;
+        border: none;
+        border-top: 1px solid;
+        text-align: center;
+      }
+      hr:after {
+        content: '§';
+        display: inline-block;
+        position: relative;
+        top: -10px;
+        /*background: #f0f0f0;*/
+        background: #ffffff;
+        color: #8c8b8b;
+        font-size: 18px;
+        -webkit-transform: rotate(70deg);
+        -moz-transform: rotate(70deg);
+        transform: rotate(70deg);
+      }
+      body {
+        font-family: "Josefin Sans", sans-serif;
+      }
       body {
         display: flex;
         flex-direction: column;
@@ -21,12 +45,10 @@
       .HolyGrail-nav {
         width: 100%;
         text-align: center;
-        order: -1;
       }
 
       article {
         max-width: 600px;
-        min-width:
         text-align: justify;
       }
 
@@ -65,7 +87,16 @@
     </style>
   </head>
   <body class="HolyGrail">
-    <header></header>
+      <header><h1>Shing Lyu</h1></header>
+      <nav class="HolyGrail-nav">
+        <ul id="nav_list">
+          <li>About</li>
+          <li>Blog</li>
+          <li>Talks</li>
+          <li>Resume</li>
+        </ul>
+        <hr>
+      </nav>
       <main class="HolyGrail-content">
         <article>
           <h1>This is Lorem Ipsum</h1>
@@ -97,17 +128,6 @@ Maecenas non ligula nec magna aliquet convallis quis sed felis. In hac habitasse
         </article>
 
       </main>
-      <nav class="HolyGrail-nav">
-        <h1>Shing Lyu</h1>
-        <ul id="nav_list">
-          <li>Home
-          </li>
-          <li>Blog
-          </li>
-          <li>Resume
-          </li>
-        </ul>
-      </nav>
     <footer>
       <hr>
       <address> <a href="mailto://shing.lyu@gmail.com">shing.lyu@gmail.com</a></address>
