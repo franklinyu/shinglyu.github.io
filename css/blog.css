@@ -39,3 +39,15 @@ main > article > time {
   text-align: center;
 }
 
+time {
+  display: block;
+  text-align: right;
+  font-style: italic;
+  color: grey;
+}
+
+nav {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+
+}

@@ -2,6 +2,13 @@
   list-style-type:none;
 }
 
+time {
+  display: block;
+  text-align: right;
+  font-style: italic;
+  color: grey;
+}
+
 main > article {
   max-width: 600px;
 }

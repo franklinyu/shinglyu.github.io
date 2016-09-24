@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0.5vh 0.5vw;
+  margin: 0.5vh 5vw;
   min-height: 99vh;
   align-items: center;
 
@@ -108,4 +108,8 @@ footer > a {
 
 img {
   box-shadow: 0.2em 0.2em 0.5em grey;
+}
+
+a {
+  text-decoration: none;
 }

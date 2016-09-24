@@ -18,14 +18,14 @@ css: /css/blog.css
         <!-- Pagination links -->
         <nav class="pagination">
           {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path  }}" class="previous button ">< Newer</a>
+          <a href="{{ paginator.previous_page_path  }}" class="previous">< Newer</a>
           {% else %}
-          <a class="previous button  disabled">< (Already newest)</a>
+          <span class="previous"></span>
           {% endif %}
           <span class="page_number "> Page {{ paginator.page  }} of {{ paginator.total_pages  }}</span>
           {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path  }}" class="next button ">Older ></a>
+          <a href="{{ paginator.next_page_path  }}" class="next">Older ></a>
           {% else %}
-          <span class="next button  disabled">(Already oldest) ></span>
+          <span class="next"></span>
           {% endif %}
         </nav>
