@@ -2,3 +2,35 @@ img {
   max-width: 100%;
   max-height: 80vh;
 }
+
+main > hr {
+  width: 50%;
+  margin:2em auto;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main > article > time {
+  display:block;
+  /* width: 100%;*/
+  text-align: right;
+}
+
+.previous {
+  flex:1;
+  text-align: left;
+}
+
+.next {
+  flex:1;
+  text-align: right;
+}
+
+.page_number {
+  flex:1;
+  text-align: center;
+}

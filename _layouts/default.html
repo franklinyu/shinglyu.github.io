@@ -6,7 +6,9 @@
     <title>{{ page.title }} | Shing's Blog</title>
 
     <link href="/css/default.css" rel="stylesheet">
+    {% if page.css %}
     <link href="{{page.css}}" rel="stylesheet">
+    {% endif %}
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
   </head>
