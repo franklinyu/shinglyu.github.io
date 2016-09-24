@@ -9,18 +9,21 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+.content {
+  font-family: "Helvetica", sans-serif;
+}
+
 .nav, footer {
   min-width: 80%;
   text-align: center;
-}
-
-.nav > hr {
-  margin-left: 0 auto;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
 }
 
 article {
   max-width: 600px;
   text-align: justify;
+  line-height: 1.75em;
 }
 
 #nav_list {
@@ -34,6 +37,7 @@ article {
 #nav_list > li {
   list-style-type: none;
   flex: 1;
+  margin: 0.25em 0;
 }
 
 #nav_list > li > a {
@@ -76,7 +80,7 @@ hr:after {
   content: '§';
   display: inline-block;
   position: relative;
-  top: -10px;
+  top: -12px;
   /*background: #f0f0f0;*/
   background: #ffffff;
   color: #8c8b8b;
@@ -84,11 +88,14 @@ hr:after {
   -webkit-transform: rotate(70deg);
   -moz-transform: rotate(70deg);
   transform: rotate(70deg);
+  font-family: Serif;
+  font-weight: normal;
 }
 
 main hr {
   width: 50%;
   margin: 2em auto;
+  border-top: 1px solid lightgrey;
 }
 
 dt {
@@ -99,3 +106,6 @@ footer > a {
   margin: auto 1em;
 }
 
+img {
+  box-shadow: 0.2em 0.2em 0.5em grey;
+}

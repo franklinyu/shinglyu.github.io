@@ -10,3 +10,19 @@ main > article img {
   max-width: 100%;
   max-height: 80vh;
 }
+
+figure {
+  margin: 1em 1em;
+}
+pre {
+  padding: 1em 1em;
+  border-radius: 0.5em;
+  overflow: auto;
+  background: #e0e0e0;
+}
+
+code {
+  background: #e0e0e0;
+  padding: 0.2em;
+  border-radius: 0.2em;
+}

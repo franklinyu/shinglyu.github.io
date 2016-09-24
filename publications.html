@@ -9,7 +9,12 @@ css: /css/projects.css
   <h1>{{category.title}}</h4>
   {% for publication in category.publications%}
   <dl>
-    <dt><a href="{{publication.title_href}}" target="_blank">{{publication.title}}</a></dt>
+
+    {% if publication.title_url%}
+    <dt><a href="{{publication.title_url}}" target="_blank">{{publication.title}}</a></dt>
+    {% else %}
+    <dt>{{publication.title}}</dt>
+    {% endif %}
     {% if publication.source_url%}
     <dd>[<a href="{{publication.source_url}}" target="_blank">Source Code</a>]</dd>
     {% endif %}

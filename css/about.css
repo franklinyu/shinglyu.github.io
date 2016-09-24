@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+#about-photo > img {
+  box-shadow: unset;
+}
+
 #about-intro {
   margin-left: 1em;
   flex: 2;

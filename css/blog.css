@@ -34,3 +34,8 @@ main > article > time {
   flex:1;
   text-align: center;
 }
+
+#rss {
+  text-align: center;
+}
+
