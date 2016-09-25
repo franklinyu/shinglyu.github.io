@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width">
     <title>{{ page.title }} | Shing's Blog</title>
 
-    <link href="/css/default.css" rel="stylesheet">
-    {% if page.css %}
-    <link href="{{page.css}}" rel="stylesheet">
-    {% endif %}
-    <link href="/css/github.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
   </head>
   <body>
@@ -54,3 +48,9 @@
   </body>
 </html>
 
+<link href="/css/default.css" rel="stylesheet">
+{% if page.css %}
+<link href="{{page.css}}" rel="stylesheet">
+{% endif %}
+<link href="/css/github.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
