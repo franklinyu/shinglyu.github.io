@@ -1,10 +1,5 @@
 - title: "Featured"
   projects:
-    - title: "MozITP"
-      title_url: "https://github.com/Mozilla-TWQA/MozITP"
-      description: "Mozilla Integrated Tools Package. An all-in-one testing tool for Firefox ecosystem. You can flash phones, run Firefox OS phone or TV simulators, and run automated tests in this package. Greatly reduce the time and effort of setting up a testing enviornment."
-      thumbnail_url: "https://raw.githubusercontent.com/Mozilla-TWQA/MozITP/master/menu.png"
-      source_url: "https://github.com/Mozilla-TWQA/MozITP"
 
     - title: "The Servo Parallel Browser Engine"
       title_url: "https://servo.org"
@@ -18,20 +13,32 @@
       thumbnail_url: "projects/FocusBlocker/screenshot_icon.png"
       source_url: 
 
-    - title: "MDSlides-local"
-      title_url: "https://github.com/shinglyu/mdslides-local"
-      description: Markdown slideshow system based on Reveal.js, runs locally without the need for a web server 
-      thumbnail_url: 
-      source_url: 
+    - title: "Itinerary Viewer"
+      title_url: https://github.com/shinglyu/itinerary-viewer
+      description: Travel planner tool suite. Automaticall search for maps, direction and export as printable PDF and digital map file
+      thumbnail_url:
+      source_url: https://github.com/shinglyu/itinerary-viewer
 
-    - title: "BzDeck"
-      title_url: "https://www.bzdeck.com"
-      description: A useful experimental Bugzilla client demonstrating modern Web application technologies such as CSS3, DOM4, HTML5, ECMAScript 6 and WAI-ARIA
-      thumbnail_url: https://camo.githubusercontent.com/5e4ae229925e8592e6ad7a3acf601525bee0d0ee/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f426c4f5151776a43514145664232372e706e673a6c61726765
-      source_url: https://github.com/bzdeck/bzdeck
+    - title: "QuantumVim"
+      title_url: https://addons.mozilla.org/zh-TW/firefox/addon/quantumvim/
+      description: Adds basic vim commands to Firefox 48+ (with e10s & WebExtension).
+      thumbnail_url: https://addons.cdn.mozilla.net/user-media/previews/full/178/178010.png?modified=1472658618
+      source_url: https://github.com/shinglyu/itinerary-viewer
+
+    - title: "MDSlides-new"
+      title_url: "https://github.com/shinglyu/mdslides-new"
+      description: Markdown slideshow system based on Remark, with live-refresh and exporting to a single HTML file
+      thumbnail_url:
+      source_url: "https://github.com/shinglyu/mdslides-new"
 
 - title: Mozilla
   projects:
+    - title: "MozITP"
+      title_url: "https://github.com/Mozilla-TWQA/MozITP"
+      description: "Mozilla Integrated Tools Package. An all-in-one testing tool for Firefox ecosystem. You can flash phones, run Firefox OS phone or TV simulators, and run automated tests in this package. Greatly reduce the time and effort of setting up a testing enviornment."
+      thumbnail_url: "https://raw.githubusercontent.com/Mozilla-TWQA/MozITP/master/menu.png"
+      source_url: "https://github.com/Mozilla-TWQA/MozITP"
+
     - title: "MozIlluminate"
       title_url: "https://github.com/MozIlluminate/mozilluminate-demo"
       description: "Next generation MozTrap, Mozilla's test case management database.  Using Google Spreadsheet to manage test cases and execute them in MozTrap. Greatly imporve the readability and maintainablity of test cases"
@@ -43,6 +50,12 @@
       description: "Using machine learning to find duplicated or redundent test cases on MozTrap, our test case management database."
       thumbnail_url: 
       source_url: "https://github.com/shinglyu/moztrap-dup-finder"
+
+    - title: "BzDeck"
+      title_url: "https://www.bzdeck.com"
+      description: A useful experimental Bugzilla client demonstrating modern Web application technologies such as CSS3, DOM4, HTML5, ECMAScript 6 and WAI-ARIA
+      thumbnail_url: https://camo.githubusercontent.com/5e4ae229925e8592e6ad7a3acf601525bee0d0ee/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f426c4f5151776a43514145664232372e706e673a6c61726765
+      source_url: https://github.com/bzdeck/bzdeck
 
     - title: "BzDeck (Firefox Add-on)"
       title_url: https://addons.mozilla.org/en-US/firefox/addon/bzdeck
@@ -126,6 +139,12 @@
 
 - title: Firefox (Desktop) Add-ons
   projects:
+    - title: "Move Active Tab To Left"
+      title_url: https://addons.mozilla.org/zh-TW/firefox/addon/move-active-tab-to-left/
+      description: Move active tab to the left end, so recent tabs cluster to the left side.
+      thumbnail_url:
+      source_url:
+
     - title: "Kanbanmarks"
       title_url: https://addons.mozilla.org/en-US/firefox/addon/kanbanmark/
       description: Organize your bookmarks with ease in a kanban-style layout 
@@ -157,6 +176,12 @@
       description: "An cloud-based editor for presentation slides using Markdown syntax."
       thumbnail_url: "projects/MDSlides/screenshot.png" 
       source_url: 
+
+    - title: "MDSlides-local"
+      title_url: "https://github.com/shinglyu/mdslides-local"
+      description: Markdown slideshow system based on Reveal.js, runs locally without the need for a web server
+      thumbnail_url:
+      source_url: "https://github.com/shinglyu/mdslides-local"
 
 - title: Freelancing
   projects:
