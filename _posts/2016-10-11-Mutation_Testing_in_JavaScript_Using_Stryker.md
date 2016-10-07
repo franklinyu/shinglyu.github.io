@@ -2,9 +2,11 @@
 layout: post
 title:  "Mutation Testing in JavaScript Using Stryker"
 categories: Testing
+date: 2016-10-11 09:00:00 +08:00
+tags: mozilla
+excerpt_separator: <!--more-->
 ---
 
-* Code example: [github link](https://github.com/shinglyu/JS-mutation-testing-example)
 
 Earlier this year, I wrote a [blog post](http://shinglyu.github.io/testing/2016/02/15/Mutation_Testing_in_JavaScript_Using_Grunt_Mutation_Testing.html) introducing Mutation Testing in JavaScript using the [Grunt Mutation Testing framework](https://www.npmjs.com/package/grunt-mutation-testing). But as their NPM README said,
 
@@ -12,7 +14,10 @@ Earlier this year, I wrote a [blog post](http://shinglyu.github.io/testing/2016/
 
 So I'll update my post to use the latest Stryker framework. The following will be the updated post with all the code example migrated to the Stryker framework:
 
+<!--more-->
 <hr>
+
+* Code example: [github link](https://github.com/shinglyu/JS-mutation-testing-example-stryker)
 
 Last November (2015) I attended the EuroStar Software Testing Conference, and was introduced to a interesting idea called mutation testing. Ask yourself: "How do I ensure my (automated) unit test suite is good enough?". Did you miss any important test? Is your test always passing so it didn't catch anything? Is there anything un-testable in your code such that your test suite can never catch it?
 
