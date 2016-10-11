@@ -233,7 +233,7 @@ Mutation score based on all code: 36.36%
 {% endhighlight %}
 
 
-As you can see, it tested 22 kinds of mutations, but 8 of them survived!
+As you can see, it tested 22 kinds of mutations, but 14 (22-8=14) of them survived!
 
 Let's look at a survived mutant:
 
@@ -343,4 +343,4 @@ This is one of the side benefit of equivalent mutations, although your test suit
 
 <h1>Next Steps</h1>
 
-By now you should have a rough idea about how mutation testing works, and how to actually apply them in your JavaScript project. If you are interested in mutation testing, there are more interesting question you can dive into, for example, how to use code coverage data to reduce the test you need to run? How to avoid equivalent mutations? I hope you'll find many interesting methods you can apply to your testing work. You can submit issues and suggestions to the Stryker [GitHub repository](https://github.com/stryker-mutator/stryker), or even contribute code to them. The team is very responsive and friendly. Happy Mutation Testing!
+By now you should have a rough idea about how mutation testing works, and how to actually apply them in your JavaScript project. If you are interested in mutation testing, there are more interesting questions you can dive into, for example, how to use code coverage data to reduce the test you need to run? How to avoid equivalent mutations? I hope you'll find many interesting methods you can apply to your testing work. You can submit issues and suggestions to the Stryker [GitHub repository](https://github.com/stryker-mutator/stryker), or even contribute code to them. The team is very responsive and friendly. Happy Mutation Testing!
