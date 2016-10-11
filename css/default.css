@@ -11,6 +11,7 @@ body {
 
 .content {
   font-family: "Helvetica", sans-serif;
+  max-width: 100%;
 }
 
 .nav, footer {
