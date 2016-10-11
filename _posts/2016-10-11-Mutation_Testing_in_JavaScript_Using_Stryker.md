@@ -2,9 +2,11 @@
 layout: post
 title:  "Mutation Testing in JavaScript Using Stryker"
 categories: Testing
+date: 2016-10-11 09:00:00 +08:00
+tags: mozilla
+excerpt_separator: <!--more-->
 ---
 
-* Code example: [github link](https://github.com/shinglyu/JS-mutation-testing-example)
 
 Earlier this year, I wrote a [blog post](http://shinglyu.github.io/testing/2016/02/15/Mutation_Testing_in_JavaScript_Using_Grunt_Mutation_Testing.html) introducing Mutation Testing in JavaScript using the [Grunt Mutation Testing framework](https://www.npmjs.com/package/grunt-mutation-testing). But as their NPM README said,
 
@@ -12,7 +14,10 @@ Earlier this year, I wrote a [blog post](http://shinglyu.github.io/testing/2016/
 
 So I'll update my post to use the latest Stryker framework. The following will be the updated post with all the code example migrated to the Stryker framework:
 
+<!--more-->
 <hr>
+
+* Code example: [github link](https://github.com/shinglyu/JS-mutation-testing-example-stryker)
 
 Last November (2015) I attended the EuroStar Software Testing Conference, and was introduced to a interesting idea called mutation testing. Ask yourself: "How do I ensure my (automated) unit test suite is good enough?". Did you miss any important test? Is your test always passing so it didn't catch anything? Is there anything un-testable in your code such that your test suite can never catch it?
 
@@ -228,7 +233,7 @@ Mutation score based on all code: 36.36%
 {% endhighlight %}
 
 
-As you can see, it tested 22 kinds of mutations, but 8 of them survived!
+As you can see, it tested 22 kinds of mutations, but 14 (22-8=14) of them survived!
 
 Let's look at a survived mutant:
 
@@ -338,4 +343,4 @@ This is one of the side benefit of equivalent mutations, although your test suit
 
 <h1>Next Steps</h1>
 
-By now you should have a rough idea about how mutation testing works, and how to actually apply them in your JavaScript project. If you are interested in mutation testing, there are more interesting question you can dive into, for example, how to use code coverage data to reduce the test you need to run? How to avoid equivalent mutations? I hope you'll find many interesting methods you can apply to your testing work. You can submit issues and suggestions to the Stryker [GitHub repository](https://github.com/stryker-mutator/stryker), or even contribute code to them. The team is very responsive and friendly. Happy Mutation Testing!
+By now you should have a rough idea about how mutation testing works, and how to actually apply them in your JavaScript project. If you are interested in mutation testing, there are more interesting questions you can dive into, for example, how to use code coverage data to reduce the test you need to run? How to avoid equivalent mutations? I hope you'll find many interesting methods you can apply to your testing work. You can submit issues and suggestions to the Stryker [GitHub repository](https://github.com/stryker-mutator/stryker), or even contribute code to them. The team is very responsive and friendly. Happy Mutation Testing!
