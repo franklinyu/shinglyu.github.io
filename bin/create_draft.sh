@@ -10,8 +10,14 @@ TIME=$(date +%Y-%m-%d\ %H:%M:%S\ +08:00)
 #echo $SLUGIFIED
 OUTFILE="_drafts/$SLUGIFIED.md"
 
-
-cp _drafts/template.md $OUTFILE
+echo -n "Should this post appear on Planet Mozilla? [Y/n]" 
+read MOZ
+if [[ $MOZ =~ ^[Nn]$ ]]
+then
+  cp _drafts/template.md $OUTFILE
+else
+  cp _drafts/template_moz.md $OUTFILE
+fi
 # sed -i 's/title:  "Your Title Here" /title: "$OUTFILE"/g'
 sed -i "s/title: TODO/title: $TITLE/g" $OUTFILE
 sed -i "s/date: 2010-01-01 00:00:00 +08:00/date: $TIME/g" $OUTFILE
