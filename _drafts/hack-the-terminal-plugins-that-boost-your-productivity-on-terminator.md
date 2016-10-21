@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hack the Terminal: Plugins That Boost Your Productivity on Terminator
+title: Hack the Terminal - Plugins That Boost Your Productivity on Terminator
 categories: Web
 date: 2016-10-15 15:44:03 +08:00
 tags: mozilla
