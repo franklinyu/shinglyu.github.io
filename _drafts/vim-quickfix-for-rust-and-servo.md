@@ -8,7 +8,8 @@ excerpt_separator: <!--more-->
 ---
 While working on a compiled language like Rust, a typical workflow is compile -> find the errors in the compiler message -> find the file containing the error -> edit -> re-compile. But usually there are lots of errors scattered around the compiler log, and to identify the filename and line number, and manually open the file to the correct line in an editor is a tedious job. Vim's [quickfix][quickfix] streamline the process by collecting the errors into the split panel in vim, and allow you to navigate through the errors using the `:cnext` (next error) and `:cprev` (previous command). While you navigate to an error, the corresponding source file will be opened in the main vim window and jump directly to the line where the error is.
 
-![quickfix screenshot]()
+![quickfix-1.png]({{site_url}}/blog_assets/quickfix-rust/quickfix-1.png)
+
 
 <!--more-->
 When you run `:make` inside vim, vim will execute the external compile tool (default: `Makefile`'s `make`'), then the compiler output will be parsed to extract the file name, line number, etc. By default, vim understands `Makefile`-based projects with C/C++ compiler output. But you can change the behavior by setting the `makeprg` (defines what `:make` does) and the `errorformat` (error message parsing pattern). (You can run `:help options` and read "22 running make and jumping to errors" for detail.)
@@ -24,13 +25,15 @@ Then run `:PluginInstall` in vim.
 
 Now for ordinary Rust project which uses `cargo`, you can set the compiler as `cargo` by `:compiler cargo`. Then if you run `:make build`, vim will execute `cargo build` for you.
 
-![cargo build]()
+![cargo-build.png]({{site_url}}/blog_assets/quickfix-rust/cargo-build.png)
+![cargo-error.png]({{site_url}}/blog_assets/quickfix-rust/cargo-error.png)
  
 You can also pass other parameters like you'd to `cargo`, e.g. `:make test` will run `cargo test`.
 
-After the compilation finished, you won't see much difference, that's because we haven't open the quickfix panel yet. Now type `:copen` then you'll see a list of errors like this:
+After the compilation finished, you will see the source code being loaded, but you don't see the error message. That's because we haven't open the quickfix panel yet. Now type `:copen` then you'll see a list of errors like this:
 
-![quickfix error]()
+![quickfix-1.png]({{site_url}}/blog_assets/quickfix-rust/quickfix-1.png)
+![quickfix-2.png]({{site_url}}/blog_assets/quickfix-rust/quickfix-2.png)
 
 The vim main window will load the source file where the first error is pointing to. After you finish fixing it, you can use `:cnext` command to jump to the next one.
 
@@ -58,7 +61,9 @@ set secure
 
 That's it! Now you can have different compiler setup in different projects.
 
-[quickfix]: TODO
-[rustvim]: TODO
-[readme]: TODO
-[]: TODO
+[quickfix]: http://vimdoc.sourceforge.net/htmldoc/quickfix.html
+[rust.vim]: https://github.com/rust-lang/rust.vim
+[readme]: https://github.com/rust-lang/rust.vim#installation
+[vundle]: https://github.com/VundleVim/Vundle.vim
+[neovim]: https://neovim.io/
+
