@@ -38,13 +38,13 @@ After the compilation finished, you will see the source code being loaded, but y
 The vim main window will load the source file where the first error is pointing to. After you finish fixing it, you can use `:cnext` command to jump to the next one.
 
 # Servo
-This all works very well for `cargo`-based Rust projects, but what if you are working on Servo, which uses `mach` as the build tool? The solution is simple, you still run `:compiler cargo` to get the `errorformat` setup. But then you run `:set makeprg=mach` to make `:make` run `./mach` instead of `cargo`.
+This all works very well for `cargo`-based Rust projects, but what if you are working on Servo, which uses `mach` as the build tool? The solution is simple, you still run `:compiler cargo` to get the `errorformat` setup. But then you run `:set makeprg=./mach` to make `:make` run `./mach` instead of `cargo`.
 
 If you want to avoid typing the commands every time you restart vim, you can set them in your `~/.vimrc`, but if you work on Servo and other `cargo`-based Rust projects at the same time, you can actually set a per-directory based configuration. For example, you can put a `.vimrc` (`.nvimrc` if you use [NeoVim][neovim]) in your Servo directory like so:
 
 {%highlight bash%}
 compiler cargo
-set makeprg=mach
+set makeprg=./mach
 
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
