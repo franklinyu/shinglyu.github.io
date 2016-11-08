@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Beginner's guide to rebasing and squashing
+title: Beginner's guide to git rebasing and squashing
 categories: Web
 date: 2016-11-04 14:14:16 +08:00
 tags: mozilla
