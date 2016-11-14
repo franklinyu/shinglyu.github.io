@@ -13,9 +13,6 @@ Big thanks to [Wafflespeanut][waffle] who proofread the post, any error you foun
 
 ---
 
-Suppose you've created a pull request following the [checklist][checklist], but the reviewer ask you to fix something, do a rebase or squash your commits, how exactly do you do that? If you have some experience with git, you might want to check the [GitHub workflow][gh-workflow] for a quick overview. But if you are not familiar with git enough, we'll teach you how to do these common operations in detail.
-
-<!--more-->
 Suppose you've created a pull request following the [checklist][checklist], but the reviewer asks you to fix something, do a rebase or squash your commits, how exactly do you do that? If you have some experience with git, you might want to check the [GitHub workflow][gh-workflow] for a quick overview. But if you are not familiar with git enough, we'll teach you how to do these common operations in detail.
 
 <!--more-->
