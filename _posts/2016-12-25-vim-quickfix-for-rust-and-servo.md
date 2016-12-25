@@ -2,7 +2,7 @@
 layout: post
 title: Vim QuickFix for Rust and Servo
 categories: Web
-date: 2016-10-31 10:32:56 +08:00
+date: 2016-12-25 21:00:00 +08:00
 tags: mozilla
 excerpt_separator: <!--more-->
 ---
