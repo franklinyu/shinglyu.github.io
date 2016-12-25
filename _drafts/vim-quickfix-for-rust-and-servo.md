@@ -62,7 +62,7 @@ set secure
 That's it! Now you can have different compiler setup in different projects.
 
 [quickfix]: http://vimdoc.sourceforge.net/htmldoc/quickfix.html
-[rust.vim]: https://github.com/rust-lang/rust.vim
+[rustvim]: https://github.com/rust-lang/rust.vim
 [readme]: https://github.com/rust-lang/rust.vim#installation
 [vundle]: https://github.com/VundleVim/Vundle.vim
 [neovim]: https://neovim.io/
