@@ -51,3 +51,19 @@ nav {
   font-weight: bold;
 
 }
+
+pre {
+  padding: 1em 1em;
+  border-radius: 0.5em;
+  overflow: auto;
+  background: #e0e0e0;
+}
+
+code {
+  background: #e0e0e0;
+  /* padding: 0.2em; */
+  border-radius: 0.2em;
+  font-size: 16px;
+  line-height: 1em;
+  font-family: Courier New, Courier, monospace;
+}

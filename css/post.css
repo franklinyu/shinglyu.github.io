@@ -21,6 +21,7 @@ main > article img {
 figure {
   margin: 1em 1em;
 }
+
 pre {
   padding: 1em 1em;
   border-radius: 0.5em;
@@ -30,8 +31,9 @@ pre {
 
 code {
   background: #e0e0e0;
-  padding: 0.2em;
+  /* padding: 0.2em; */
   border-radius: 0.2em;
   font-size: 16px;
   line-height: 1em;
+  font-family: Courier New, Courier, monospace;
 }
