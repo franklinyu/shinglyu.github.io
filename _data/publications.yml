@@ -4,10 +4,15 @@
       title_url: http://shinglyu.github.io/my_presentations/
       description: Slides for my presentations
 
+    - title: "2017/1/7 Lecturer of Rust Beginner Workshop, Taipei"
+    - title: "2016/10/19 Speaker at EE dept., National Taiwan University, Taipei"
+      description: "\"How it feels like to be a browser hacker?\""
+
     - title: "2016 Taiwan Code Sprint mentor, Taipei"
       description: "Mentoring new contributors to fix Servo bugs"
 
     - title: "2016 Modern Web Conf Speaker, Taipei"
+      title_url: "http://www.ithome.com.tw/video/108438"
       description: "\"Servo, the parallel browser engine\""
 
     - title: "2016 COSCUP Speaker, Taipei"
