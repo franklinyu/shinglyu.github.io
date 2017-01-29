@@ -27,17 +27,21 @@ article {
   line-height: 1.75em;
 }
 
-#nav_list {
+#nav_list, #footer_list {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0px;
   width: 100%;
 }
 
 #nav_list > li {
   list-style-type: none;
-  flex: 1;
+  margin: 0.25em 0;
+}
+
+#footer_list > li {
+  list-style-type: none;
   margin: 0.25em 0;
 }
 
@@ -60,12 +64,13 @@ article {
     flex:1;
 
   }
-  .nav, footer{
+  .nav, footer {
     min-width: auto;
     width: 600px;
     flex: 1;
   }
-  #nav_list {
+
+  #nav_list, #footer_list {
     flex-direction: row;
   }
 }

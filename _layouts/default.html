@@ -44,10 +44,16 @@
       </main>
     <footer>
       <hr>
+      <ul id="footer_list">
       {% for contact in site.data.contacts %}
-      <a href="{{contact.url}}">{{contact.name}}</a>
+      <li>
+        <a href="{{contact.url}}">{{contact.name}}</a>
+      </li>
       {% endfor %}
-      <a href="/feed.xml">RSS</a>
+      <li>
+        <a href="/feed.xml">RSS</a>
+      </li>
+      </ul>
       <p>Last update: {{site.time | date_to_string}}</p>
     </footer>
     <script>
