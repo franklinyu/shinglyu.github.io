@@ -30,9 +30,11 @@
           {% for node in sorted_pages %}
             {% if site.exclude_pages contains node.title %}
               {% continue %}
-            {% else %}
+            {% endif %}
+            {% if node.url contains "css" %}
+              {% continue %}
+            {% endif %}
              <li {% if node.url == page.url%} class="active" {% endif %}><a href="{{node.url}}">{{node.title}}</a></li>
-          {% endif %}
           {%endfor%}
         </ul>
         <hr>
@@ -42,10 +44,16 @@
       </main>
     <footer>
       <hr>
+      <ul id="footer_list">
       {% for contact in site.data.contacts %}
-      <a href="{{contact.url}}">{{contact.name}}</a>
+      <li>
+        <a href="{{contact.url}}">{{contact.name}}</a>
+      </li>
       {% endfor %}
-      <a href="/feed.xml">RSS</a>
+      <li>
+        <a href="/feed.xml">RSS</a>
+      </li>
+      </ul>
       <p>Last update: {{site.time | date_to_string}}</p>
     </footer>
     <script>
