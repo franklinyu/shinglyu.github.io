@@ -6,6 +6,12 @@ date: 2017-08-07 14:37:22 +08:00
 tags: mozilla
 excerpt_separator: <!--more-->
 ---
+__Edit__: Andreas from the Mozilla Add-on team points out a few errors, I'll keep them here before I can inline them into the post:
+
+* Do NOT create a new version of the extension on AMO, upload and replace your legacy extension using the same listing.
+* The user drop is related to https://blog.mozilla.org/addons/2017/06/21/upcoming-changes-usage-statistics/
+* The `web-ext run` should work without an ID
+* `strict_min_version` is not mandatory
 
 Three years ago, I wrote the [FocusBlocker][oldfb] to help me focus on my master thesis. It's basically a website blocker that stops me from checking Facebook every five minute. But is different from other blockers like [LeechBlock][leechblock] that requires you to set a fixed schedule. FocusBlocker lets you set a quota, e.g. I can browse 10 minutes of Facebook then block it for 50 minutes. So as long as you have remaining quota, you can check Facebook anytime. I'm glad that other people find it useful, and I even got my first donation through AMO because of happy users.
 
