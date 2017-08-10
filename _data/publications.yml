@@ -4,36 +4,47 @@
       title_url: http://shinglyu.github.io/my_presentations/
       description: Slides for my presentations
 
-    - title: "2017/3/22 Mozilla Community, Taipei"
+    - title: "2017/8/6 COSCUP speaker, Taipei"
+      title_url: https://coscup.org/2017/#/schedule
+      description: "Rust Hands-on Workshop"
+
+    - title: "2017/8/6 COSCUP speaker, Taipei"
+      title_url: https://coscup.org/2017/#/schedule
+      description: "Python Interpreter in Rust"
+
+    - title: "2017/7/21 HackNTU Hackathon mentor, Taipei"
+
+    - title: "2017/3/22 Taipei Mozilla Community speaker"
       description: "The Future of Firefox -- Project Quantum"
 
-    - title: "2017/3/18 SITCON (Student's IT Conference), Taipei"
+    - title: "2017/3/18 SITCON (Student's IT Conference) speaker, Taipei"
       description: "The Future of Firefox -- Project Quantum"
 
-    - title: "2017/1/7 Lecturer of Rust Beginner Workshop, Taipei"
+    - title: "2017/1/7 Rust Beginner Workshop host and mentor, Taipei"
+
     - title: "2016/10/19 Speaker at EE dept., National Taiwan University, Taipei"
       description: "\"How it feels like to be a browser hacker?\""
 
-    - title: "2016 Taipei Rust Meetup and Study Group Lecturer"
+    - title: "2016 Taipei Rust Meetup and Study Group lecturer"
 
-    - title: "2016 Taiwan Code Sprint mentor, Taipei"
+    - title: "2016 Taiwan Code Sprint mentor"
       description: "Mentoring new contributors to fix Servo bugs"
 
-    - title: "2016 Modern Web Conf Speaker, Taipei"
+    - title: "2016 Modern Web Conf speaker"
       title_url: "http://www.ithome.com.tw/video/108438"
       description: "\"Servo, the parallel browser engine\""
 
-    - title: "2016 COSCUP Speaker, Taipei"
+    - title: "2016 COSCUP speaker"
       title_url: https://shinglyu.github.io/my_presentations/2016-coscup-servo-intro.pdf
       description: "\"Servo, the parallel browser engine\" at Conference for Open Source Coders, Users and Promoters (click the title for slides)"
 
     - title: "2015 MozLando Firefox OS All-hands speaker, Orlando"
       description: Talking about Firefox OS Add-ons
 
-    - title: "2015 NCU Academy Program Lecturer, Taoyuan"
+    - title: "2015 NCU academy program lecturer, Taoyuan"
       description: "Teaching undergrads about software testing and JavaScrpt unit testing at \"Implementation and SDLC of Web Apps\" class at National Central Univesity"
 
-    - title: "2015 NTU Open Source Club Workshop Speaker, Taipei"
+    - title: "2015 NTU Open Source Club workshop speaker, Taipei"
       description: "Hosting the Firefox OS Hands-on Workshop at National Taiwan University Open Source Club"
 
 - title: Guest Posts
