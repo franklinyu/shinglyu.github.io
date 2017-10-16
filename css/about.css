@@ -5,5 +5,7 @@
 
 #about-photo > img {
   box-shadow: unset;
+  width: 80%;
+  max-width: 600px;
 }
 
